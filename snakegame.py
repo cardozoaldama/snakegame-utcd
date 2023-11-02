@@ -91,3 +91,23 @@ window.onkeypress(move_down, 'Down')
 # Segmentos.
 segments = []
 highest_score = 0
+
+# Implementación del juego:
+while True:
+    window.update()
+    if snake.xcor() > 290 or snake.xcor() < -290 or snake.ycor() > 290 or snake.ycor() < -290:
+        time.sleep(1)
+        snake.goto(0, 0)
+        snake.direction = "Stop"
+        snake.shape("square")
+        snake.color("green")
+
+        for segment in segments:
+            segment.goto(1000, 1000)
+        
+        segments.clear()
+        puntuacion_jugador = 0
+        tiempo_retraso = 0.1
+        score_pen.clear()
+        score_pen.write("Your score: 0 | Highest score: {}".format(highest_score), align="center", font=("Arial", 24, "normal"))
+        
