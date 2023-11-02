@@ -49,3 +49,7 @@ score_pen.write("Tu puntación: 0 | Tu puntación más alta: 0", align="center",
 def move_left():
     if snake.direction != "right":
         snake.direction = "left"
+
+def move_right():
+    if snake.direction != "left":
+        snake.direction = "right"
