@@ -24,3 +24,12 @@ snake.color("black")
 snake.penup()
 snake.goto(0, 0)
 snake.direction = "Stop"
+
+# Crear la comida:
+food = turtle.Turtle()
+shapes = random.choice(['triangle', 'circle'])
+food.shape(shapes)
+food.color("blue")
+food.speed(0)
+food.penup()
+food.goto(0, 100)
