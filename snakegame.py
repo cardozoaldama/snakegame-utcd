@@ -134,3 +134,9 @@ while True:
         coord_x = segments[i - 1].xcor()
         coord_y = segments[i - 1].ycor()
         segments[i].goto(coord_x, coord_y)
+
+    if len(segments) > 0:
+        coord_x = snake.xcor()
+        coord_y = snake.ycor()
+        segments[0].goto(coord_x, coord_y)
+    
