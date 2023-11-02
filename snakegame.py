@@ -124,4 +124,8 @@ while True:
         segments.append(added_segment)
         tiempo_retraso -= 0.001
         puntuacion_jugador += 5
-        
+
+        if puntuacion_jugador > highest_score:
+            highest_score = puntuacion_jugador
+            score_pen.clear()
+            score_pen.write("Your score: {} | Highest score: {}".format(puntuacion_jugador, highest_score), align="center", font=("Arial", 24, "normal"))
