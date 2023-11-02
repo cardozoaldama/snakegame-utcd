@@ -110,4 +110,18 @@ while True:
         tiempo_retraso = 0.1
         score_pen.clear()
         score_pen.write("Your score: 0 | Highest score: {}".format(highest_score), align="center", font=("Arial", 24, "normal"))
+
+    if snake.distance(food) < 20:
+        coord_x = random.randint(-270, 270)
+        coord_y = random.randint(-270, 270)
+        food.goto(coord_x, coord_y)
+        # Agregar un segmento:
+        added_segment = turtle.Turtle()
+        added_segment.speed(0)
+        added_segment.shape("square")
+        added_segment.color("white")
+        added_segment.penup()
+        segments.append(added_segment)
+        tiempo_retraso -= 0.001
+        puntuacion_jugador += 5
         
