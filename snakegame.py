@@ -33,3 +33,13 @@ food.color("blue")
 food.speed(0)
 food.penup()
 food.goto(0, 100)
+
+# Agregar puntuación para el jugador:
+score_pen = turtle.Turtle()
+score_pen.speed(0)
+score_pen.shape('square')
+score_pen.color('white')
+score_pen.penup()
+score_pen.hideturtle()
+score_pen.goto(0, 250)
+score_pen.write("Tu puntación: 0 | Tu puntación más alta: 0", align="center", font=("Arial", 24, "normal"))
