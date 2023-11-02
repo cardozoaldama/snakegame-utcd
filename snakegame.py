@@ -149,3 +149,12 @@ while True:
             snake.direction = "Stop"
             snake.color("white")
             snake.shape("square")
+
+        for segment in segments:
+            segment.goto(1000, 1000)
+            segment.clear()
+        
+        puntuacion_jugador = 0
+        tiempo_retraso = 0.1
+        score_pen.clear()
+        score_pen.write("Your score: 0 | Highest score: {}".format(highest_score), align="center", font=("Arial", 24, "normal"))
