@@ -12,7 +12,7 @@ tiempo_retraso = 0.1
 # Crear pantalla:
 window = turtle.Screen()
 window.title("Laberinto de la serpiente: 🐍")
-window.bgcolor("red")
+window.bgcolor("#6699FF")
 
 # Tamaño de la pantalla:
 window.setup(width=600, height=600)
