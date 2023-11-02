@@ -16,3 +16,11 @@ window.bgcolor("red")
 
 # Tamaño de la pantalla:
 window.setup(width=600, height=600)
+
+# Crear la serpiente:
+snake = turtle.Turtle()
+snake.shape("square")
+snake.color("black")
+snake.penup()
+snake.goto(0, 0)
+snake.direction = "Stop"
