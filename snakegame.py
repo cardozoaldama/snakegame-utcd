@@ -86,3 +86,8 @@ window.onkeypress(move_left, 'Left')
 window.onkeypress(move_right, 'Right')
 window.onkeypress(move_up, 'Up')
 window.onkeypress(move_down, 'Down')
+
+# Tercera parte, la implementación general del juego...
+# Segmentos.
+segments = []
+highest_score = 0
