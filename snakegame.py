@@ -53,3 +53,7 @@ def move_left():
 def move_right():
     if snake.direction != "left":
         snake.direction = "right"
+
+def move_up():
+    if snake.direction != "down":
+        snake.direction = "up"
