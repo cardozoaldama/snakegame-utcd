@@ -129,3 +129,8 @@ while True:
             highest_score = puntuacion_jugador
             score_pen.clear()
             score_pen.write("Your score: {} | Highest score: {}".format(puntuacion_jugador, highest_score), align="center", font=("Arial", 24, "normal"))
+
+    for i in range(len(segments) -1, 0, -1):
+        coord_x = segments[i - 1].xcor()
+        coord_y = segments[i - 1].ycor()
+        segments[i].goto(coord_x, coord_y)
