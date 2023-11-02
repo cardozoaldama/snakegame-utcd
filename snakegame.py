@@ -76,3 +76,7 @@ def move():
         coord_x = snake.xcor()
         snake.setx(coord_x + 20)
     
+    if snake.direction == "left":
+        coord_x = snake.xcor()
+        snake.setx(coord_x - 20)
+    
