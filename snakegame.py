@@ -158,3 +158,5 @@ while True:
         tiempo_retraso = 0.1
         score_pen.clear()
         score_pen.write("Your score: 0 | Highest score: {}".format(highest_score), align="center", font=("Arial", 24, "normal"))
+
+    time.sleep(tiempo_retraso)
