@@ -95,6 +95,7 @@ highest_score = 0
 # Implementación del juego:
 while True:
     window.update()
+    # En el caso que se pierda la partida:
     if snake.xcor() > 290 or snake.xcor() < -290 or snake.ycor() > 290 or snake.ycor() < -290:
         time.sleep(1)
         snake.goto(0, 0)
@@ -105,12 +106,14 @@ while True:
         for segment in segments:
             segment.goto(1000, 1000)
         
+        # Limpiar los segmentos:
         segments.clear()
         puntuacion_jugador = 0
         tiempo_retraso = 0.1
         score_pen.clear()
         score_pen.write("Your score: 0 | Highest score: {}".format(highest_score), align="center", font=("Arial", 24, "normal"))
 
+    # Control sobre la comida:
     if snake.distance(food) < 20:
         coord_x = random.randint(-270, 270)
         coord_y = random.randint(-270, 270)
@@ -125,11 +128,13 @@ while True:
         tiempo_retraso -= 0.001
         puntuacion_jugador += 5
 
+        # Verificar el máximo puntaje posible:
         if puntuacion_jugador > highest_score:
             highest_score = puntuacion_jugador
             score_pen.clear()
             score_pen.write("Your score: {} | Highest score: {}".format(puntuacion_jugador, highest_score), align="center", font=("Arial", 24, "normal"))
 
+    # Control de colisión:
     for i in range(len(segments) -1, 0, -1):
         coord_x = segments[i - 1].xcor()
         coord_y = segments[i - 1].ycor()
@@ -150,13 +155,13 @@ while True:
             snake.color("white")
             snake.shape("square")
 
-        for segment in segments:
-            segment.goto(1000, 1000)
-            segment.clear()
+            for segment in segments:
+                segment.goto(1000, 1000)
+                segment.clear()
         
-        puntuacion_jugador = 0
-        tiempo_retraso = 0.1
-        score_pen.clear()
-        score_pen.write("Your score: 0 | Highest score: {}".format(highest_score), align="center", font=("Arial", 24, "normal"))
+            puntuacion_jugador = 0
+            tiempo_retraso = 0.1
+            score_pen.clear()
+            score_pen.write("Your score: 0 | Highest score: {}".format(highest_score), align="center", font=("Arial", 24, "normal"))
 
     time.sleep(tiempo_retraso)
