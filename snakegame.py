@@ -140,3 +140,5 @@ while True:
         coord_y = snake.ycor()
         segments[0].goto(coord_x, coord_y)
     
+    move()
+    
