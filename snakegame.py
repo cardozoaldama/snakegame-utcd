@@ -80,3 +80,9 @@ def move():
         coord_x = snake.xcor()
         snake.setx(coord_x - 20)
     
+# Eventos en la pantalla:
+window.listen()
+window.onkeypress(move_left, 'Left')
+window.onkeypress(move_right, 'Right')
+window.onkeypress(move_up, 'Up')
+window.onkeypress(move_down, 'Down')
