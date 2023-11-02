@@ -7,3 +7,9 @@ import time
 puntuacion_jugador = 0
 puntuacion_mas_alta = 0
 tiempo_retraso = 0.1
+
+# Primera parte, el lienzo.
+# Crear pantalla:
+window = turtle.Screen()
+window.title("Laberinto de la serpiente: 🐍")
+window.bgcolor("red")
