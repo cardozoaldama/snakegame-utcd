@@ -141,4 +141,11 @@ while True:
         segments[0].goto(coord_x, coord_y)
     
     move()
-    
+
+    for segment in segments:
+        if segment.distance(snake) < 20:
+            time.sleep(1)
+            snake.goto(0, 0)
+            snake.direction = "Stop"
+            snake.color("white")
+            snake.shape("square")
