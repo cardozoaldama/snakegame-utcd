@@ -67,3 +67,8 @@ def move():
     if snake.direction == "up":
         coord_y = snake.ycor()
         snake.sety(coord_y + 20)
+
+    if snake.direction == "down":
+        coord_y = snake.ycor()
+        snake.sety(coord_y - 20)
+    
