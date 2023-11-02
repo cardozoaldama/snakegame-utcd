@@ -61,3 +61,9 @@ def move_up():
 def move_down():
     if snake.direction != "up":
         snake.direction = "down"
+
+# Movimiento:
+def move():
+    if snake.direction == "up":
+        coord_y = snake.ycor()
+        snake.sety(coord_y + 20)
