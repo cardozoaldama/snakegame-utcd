@@ -43,3 +43,9 @@ score_pen.penup()
 score_pen.hideturtle()
 score_pen.goto(0, 250)
 score_pen.write("Tu puntación: 0 | Tu puntación más alta: 0", align="center", font=("Arial", 24, "normal"))
+
+# Segunda parte, direcciones.
+# Asignación de direcciones con las teclas de dirección:
+def move_left():
+    if snake.direction != "right":
+        snake.direction = "left"
